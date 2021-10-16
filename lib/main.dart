@@ -45,6 +45,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final List<Transaction> _transactions = [
+    // Transaction(
+    //   id: 't1',
+    //   title: 'Novo tenis de corrida',
+    //   value: 310.76,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 't2',
+    //   title: 'Conta de luz',
+    //   value: 211.30,
+    //   date: DateTime.now(),
+    // ),
+  ];
+
   _addTransaction(String title, double value) {
     final newTransaction = Transaction(
       id: Random().nextDouble().toString(),
@@ -67,21 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
           return TransactionForm(_addTransaction);
         });
   }
-
-  final _transactions = [
-    Transaction(
-      id: 't1',
-      title: 'Novo tenis de corrida',
-      value: 310.76,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Conta de luz',
-      value: 211.30,
-      date: DateTime.now(),
-    ),
-  ];
 
   @override
   Widget build(BuildContext context) {

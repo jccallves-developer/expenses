@@ -18,6 +18,21 @@ class ExpensesApp extends StatelessWidget {
         ).copyWith(
           secondary: Colors.amber,
         ),
+        fontFamily: 'Quicksand',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                fontFamily: 'Quicksand',
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+        appBarTheme: AppBarTheme(
+            titleTextStyle: TextStyle(
+          fontFamily: 'OpenSans',
+          fontSize: 20,
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        )),
       ),
       debugShowCheckedModeBanner: false,
     );

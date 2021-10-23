@@ -94,12 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final appBar = AppBar(
-      title: Text(
-        'Despesas pessoais',
-        style: TextStyle(
-          fontSize: 30 * MediaQuery.of(context).textScaleFactor,
-        ),
-      ),
+      title: Text('Despesas pessoais'),
       actions: [
         IconButton(
           icon: Icon(Icons.add),
@@ -119,11 +114,11 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              height: availabelHeight * 0.2,
+              height: availabelHeight * 0.25,
               child: Chart(_recentTransactions),
             ),
             Container(
-              height: availabelHeight * 0.8,
+              height: availabelHeight * 0.75,
               child: TransactionList(_transactions, _removeTransaction),
             ),
           ],

@@ -1,5 +1,3 @@
-// ignore_for_file: unnecessary_null_comparison
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -73,7 +71,9 @@ class _TransactionFormState extends State<TransactionForm> {
               height: 70,
               child: Row(
                 children: [
+                  // ignore: unnecessary_null_comparison
                   Expanded(
+                    // ignore: unnecessary_null_comparison
                     child: Text(_selectedDate == null
                         ? 'Nenhuma data selecionada!'
                         : 'Data: ${DateFormat('dd/M/y').format(_selectedDate)}'),

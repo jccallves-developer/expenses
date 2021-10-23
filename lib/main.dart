@@ -93,16 +93,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    
     final appBar = AppBar(
-        title: Text('Despesas pessoais'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.add),
-            onPressed: () => _openTransactionFormModal(context),
-          ),
-        ],
-      );
+      title: Text('Despesas pessoais'),
+      actions: [
+        IconButton(
+          icon: Icon(Icons.add),
+          onPressed: () => _openTransactionFormModal(context),
+        ),
+      ],
+    );
 
     final availabelHeight = MediaQuery.of(context).size.height -
         appBar.preferredSize.height -
@@ -115,11 +114,11 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              height: availabelHeight * 0.4,
+              height: availabelHeight * 0.2,
               child: Chart(_recentTransactions),
             ),
             Container(
-              height: availabelHeight * 0.6,
+              height: availabelHeight * 0.8,
               child: TransactionList(_transactions, _removeTransaction),
             ),
           ],

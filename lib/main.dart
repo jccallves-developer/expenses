@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:device_preview/device_preview.dart';
 import 'package:expenses/components/chart.dart';
 import 'package:expenses/components/transaction_form.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,12 +11,17 @@ import 'components/chart.dart';
 import '../models/transaction.dart';
 import 'dart:math';
 
-main() => runApp(ExpensesApp());
+main() => runApp(DevicePreview(
+      builder: (context) => ExpensesApp(),
+      storage: const NoDevicePreviewStorage(),
+    ));
 
 class ExpensesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       home: MyHomePage(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
